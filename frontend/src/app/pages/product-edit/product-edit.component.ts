@@ -55,8 +55,9 @@ export class ProductEditComponent implements OnInit, AfterContentChecked {
     }
   delete() {
     this.productService.delelte(this.product).subscribe(prod => {
+       this.router.navigate(['/seller']);
         if (!prod) throw new Error;
-        this.router.navigate(['/seller']);
+       
       },
       e => {
       });
